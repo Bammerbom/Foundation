@@ -5,6 +5,8 @@ import java.nio.file.Path;
 
 public class FoundationModuleLoader implements ModuleLoader {
 
+    private Path modulesPath;
+
     public void scanModules() {
 
     }
@@ -26,10 +28,10 @@ public class FoundationModuleLoader implements ModuleLoader {
     }
 
     public void setModulesPath(Path _path) {
-
+        modulesPath = _path;
     }
 
     public Path getModulesPath() {
-        return null;
+        return modulesPath;
     }
 }

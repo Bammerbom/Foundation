@@ -8,18 +8,20 @@ public interface ModuleManager {
 
 	/**
 	 * Gets a module by it's ID
-	 * @param   id
+	 * @param   _id
 	 * @return  Module
 	 */
-	Module getModule(String id);
+	Module getModule(String _id);
 
 	/**
 	 * Gets a module by it's type. There
 	 * can only one module of each type.
-	 * @param   type
+	 * @param   _type
 	 * @return  Module
 	 */
-	Module getModule(ModuleType type);
+	Module getModule(ModuleType _type);
+
+    void registerModuleAsActive(String _id);
 
 	/**
 	 * Starts the ModLoader
@@ -27,23 +29,48 @@ public interface ModuleManager {
 	void initLoader();
 
 	/**
-	 * Called on server initialization.
+	 * Initializes all modules.
 	 */
-	void initModules();
+	void initAllModules();
 
 	/**
-	 * Called on server start.
+	 * Starts all modules.
 	 */
-	void startModules();
+	void startAllModules();
+
+    /**
+     * Starts an individual module, based on the
+     * given id.
+     * @param _id id of the module
+     */
+    void startIndividualModule(String _id);
 
 	/**
-	 * Called on server reload.
+	 * Reloads all modules.
 	 */
-	void reloadModules();
+	void reloadAllModules();
+
+    /**
+     * Reloads an individual module.
+     * @param _id id of the module
+     */
+    void reloadIndividualModule(String _id);
 
 	/**
-	 * Called on server stop.
+	 * Stops all modules.
 	 */
-	void stopModules();
+	void stopAllModules();
+
+    /**
+     * Stops an individual module.
+     * @param _id id of the module
+     */
+    void stopIndividualModule(String _id);
+
+    /**
+     * Gets a list of active modules.
+     * @return list of active modules
+     */
+    List<Module> getActiveModules();
 
 }
