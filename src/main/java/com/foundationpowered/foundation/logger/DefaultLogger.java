@@ -24,7 +24,7 @@
 
 package com.foundationpowered.foundation.logger;
 
-import com.foundationpowered.api.logger.Logger;
+import com.foundationpowered.foundation.api.logger.Logger;
 
 public class DefaultLogger implements Logger {
 

@@ -1,4 +1,4 @@
-package com.foundationpowered.api.ban;
+package com.foundationpowered.foundation.api.ban;
 
 /**
  * A BanTarget is a target that has been banned.

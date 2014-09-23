@@ -24,13 +24,19 @@
 
 package com.foundationpowered.foundation;
 
+import com.foundationpowered.foundation.api.module.Module;
 import com.foundationpowered.foundation.logger.DefaultLogger;
-import com.foundationpowered.api.logger.Logger;
+import com.foundationpowered.foundation.api.logger.Logger;
+import com.foundationpowered.foundation.module.FoundationModuleLoader;
+import com.foundationpowered.foundation.module.FoundationModuleManager;
+import com.sun.istack.internal.Nullable;
 import org.spongepowered.api.event.SpongeEventHandler;
 import org.spongepowered.api.event.state.PreInitializationEvent;
 import org.spongepowered.api.event.state.ServerStartingEvent;
 import org.spongepowered.api.event.state.ServerStoppingEvent;
 import org.spongepowered.api.plugin.Plugin;
+
+import java.util.List;
 
 /**
  * Foundation is a Sponge plugin which provides core functionality
@@ -42,12 +48,21 @@ import org.spongepowered.api.plugin.Plugin;
 @Plugin(id = "Foundation", name = "Foundation", version = "1.0.0")
 public class Foundation {
 
-	Logger logger;
+    @Nullable
+	Logger logger = null;
+
+    @Nullable
+    FoundationModuleManager moduleManager = null;
+
+    @Nullable
+    FoundationModuleLoader moduleLoader = null;
 
 	@SpongeEventHandler
 	public void onInit(PreInitializationEvent event) {
 		org.apache.logging.log4j.Logger pluginLogger = event.getPluginLog();
 		logger = new DefaultLogger(pluginLogger);
+        moduleManager = new FoundationModuleManager();
+        moduleLoader = new FoundationModuleLoader();
 		logger.info("Foundation initialization");
 	}
 
@@ -64,4 +79,8 @@ public class Foundation {
 	public void setLogger(Logger _logger) {
 		logger = _logger;
 	}
+
+    public List<Module> getModules() {
+        return moduleManager.getModules();
+    }
 }
