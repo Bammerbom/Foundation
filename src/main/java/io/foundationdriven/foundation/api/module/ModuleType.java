@@ -1,4 +1,4 @@
-package com.foundationpowered.foundation.api.module;
+package io.foundationdriven.foundation.api.module;
 
 public enum ModuleType {
 	CORE,

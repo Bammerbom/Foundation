@@ -1,4 +1,4 @@
-package com.foundationpowered.foundation.api.ban;
+package io.foundationdriven.foundation.api.ban;
 
 import javafx.util.Duration;
 

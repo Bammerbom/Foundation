@@ -1,6 +1,6 @@
-package com.foundationpowered.foundation.module;
+package io.foundationdriven.foundation.module;
 
-import com.foundationpowered.foundation.api.module.ModuleLoader;
+import io.foundationdriven.foundation.api.module.ModuleLoader;
 import java.nio.file.Path;
 
 public class FoundationModuleLoader implements ModuleLoader {

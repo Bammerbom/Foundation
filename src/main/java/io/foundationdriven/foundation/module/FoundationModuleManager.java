@@ -1,8 +1,9 @@
-package com.foundationpowered.foundation.module;
+package io.foundationdriven.foundation.module;
 
-import com.foundationpowered.foundation.api.module.Module;
-import com.foundationpowered.foundation.api.module.ModuleManager;
-import com.foundationpowered.foundation.api.module.ModuleType;
+import io.foundationdriven.foundation.api.module.Module;
+import io.foundationdriven.foundation.api.module.ModuleManager;
+import io.foundationdriven.foundation.api.module.ModuleType;
+
 import java.util.List;
 
 public class FoundationModuleManager implements ModuleManager {

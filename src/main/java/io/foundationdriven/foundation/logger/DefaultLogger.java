@@ -22,9 +22,9 @@
  * SOFTWARE.
  */
 
-package com.foundationpowered.foundation.logger;
+package io.foundationdriven.foundation.logger;
 
-import com.foundationpowered.foundation.api.logger.Logger;
+import io.foundationdriven.foundation.api.logger.Logger;
 
 public class DefaultLogger implements Logger {
 

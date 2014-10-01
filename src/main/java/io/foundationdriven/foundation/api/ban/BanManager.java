@@ -1,4 +1,4 @@
-package com.foundationpowered.foundation.api.ban;
+package io.foundationdriven.foundation.api.ban;
 
 import org.spongepowered.api.entity.Player;
 import org.spongepowered.api.plugin.Plugin;

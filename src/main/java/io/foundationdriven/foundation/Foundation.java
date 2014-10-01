@@ -22,13 +22,13 @@
  * SOFTWARE.
  */
 
-package com.foundationpowered.foundation;
+package io.foundationdriven.foundation;
 
-import com.foundationpowered.foundation.api.module.Module;
-import com.foundationpowered.foundation.logger.DefaultLogger;
-import com.foundationpowered.foundation.api.logger.Logger;
-import com.foundationpowered.foundation.module.FoundationModuleLoader;
-import com.foundationpowered.foundation.module.FoundationModuleManager;
+import io.foundationdriven.foundation.api.module.Module;
+import io.foundationdriven.foundation.logger.DefaultLogger;
+import io.foundationdriven.foundation.api.logger.Logger;
+import io.foundationdriven.foundation.module.FoundationModuleLoader;
+import io.foundationdriven.foundation.module.FoundationModuleManager;
 import com.sun.istack.internal.Nullable;
 import org.spongepowered.api.event.SpongeEventHandler;
 import org.spongepowered.api.event.state.PreInitializationEvent;
@@ -49,7 +49,7 @@ import java.util.List;
 public class Foundation {
 
     @Nullable
-	Logger logger = null;
+    Logger logger = null;
 
     @Nullable
     FoundationModuleManager moduleManager = null;

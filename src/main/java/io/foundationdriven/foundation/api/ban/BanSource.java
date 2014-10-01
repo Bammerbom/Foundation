@@ -1,4 +1,4 @@
-package com.foundationpowered.foundation.api.ban;
+package io.foundationdriven.foundation.api.ban;
 
 /**
  * BanSource is the source of a ban. It can be either a
