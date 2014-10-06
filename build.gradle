@@ -2,7 +2,10 @@ plugins {
     id 'java'
     id 'idea'
     id 'eclipse'
+    id "com.github.hierynomus.license" version "0.11.0"
 }
+
+defaultTasks 'clean', 'licenseFormat', 'build'
 
 group = 'io.foundationdriven'
 version = '0.0.1-DEV'
@@ -18,3 +21,13 @@ dependencies {
     compile project('SpongeAPI')
 }
 
+license {
+    header file('LICENSE')
+    ignoreFailures false
+    strictCheck true
+    mapping {
+        java = 'SLASHSTAR_STYLE'
+    }
+    ext.year = Calendar.getInstance().get(Calendar.YEAR)
+    ext.name = 'FoundationDriven'
+}

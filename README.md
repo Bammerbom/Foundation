@@ -26,9 +26,7 @@ Setup git, and run the following command in the Git Bash:
 
 ##### Compile using Maven
 
-    $ mvn clean
-    $ mvn package
-
+    $ gradle
 --------------------
 
 #### Contributing
