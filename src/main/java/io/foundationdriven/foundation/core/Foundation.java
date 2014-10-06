@@ -24,12 +24,9 @@
 
 package io.foundationdriven.foundation.core;
 
-import io.foundationdriven.foundation.api.module.Module;
-import io.foundationdriven.foundation.logger.DefaultLogger;
+import io.foundationdriven.foundation.core.logger.DefaultLogger;
 import io.foundationdriven.foundation.api.logger.Logger;
-import io.foundationdriven.foundation.module.FoundationModuleLoader;
-import io.foundationdriven.foundation.module.FoundationModuleManager;
-import com.sun.istack.internal.Nullable;
+import javax.annotation.Nullable;
 import org.spongepowered.api.event.SpongeEventHandler;
 import org.spongepowered.api.event.state.PreInitializationEvent;
 import org.spongepowered.api.event.state.ServerStartingEvent;
@@ -51,18 +48,10 @@ public class Foundation {
     @Nullable
     Logger logger = null;
 
-    @Nullable
-    FoundationModuleManager moduleManager = null;
-
-    @Nullable
-    FoundationModuleLoader moduleLoader = null;
-
 	@SpongeEventHandler
 	public void onInit(PreInitializationEvent event) {
 		org.apache.logging.log4j.Logger pluginLogger = event.getPluginLog();
 		logger = new DefaultLogger(pluginLogger);
-        moduleManager = new FoundationModuleManager();
-        moduleLoader = new FoundationModuleLoader();
 		logger.info("Foundation initialization");
 	}
 
@@ -80,7 +69,4 @@ public class Foundation {
 		logger = _logger;
 	}
 
-    public List<Module> getModules() {
-        return moduleManager.getModules();
-    }
 }
