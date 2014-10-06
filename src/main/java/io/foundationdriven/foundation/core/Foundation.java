@@ -22,7 +22,7 @@
  * SOFTWARE.
  */
 
-package io.foundationdriven.foundation;
+package io.foundationdriven.foundation.core;
 
 import io.foundationdriven.foundation.api.module.Module;
 import io.foundationdriven.foundation.logger.DefaultLogger;
