@@ -23,8 +23,6 @@
  */
 package io.foundationdriven.foundation.api.ban;
 
-import javafx.util.Duration;
-
 import java.util.Date;
 
 public interface Ban {
@@ -93,7 +91,7 @@ public interface Ban {
 	 * Sets the ban expires from the creation time + duration
 	 * @param   duration of the ban
 	 */
-	void setExpireInterval(Duration duration);
+	void setExpireInterval(BanDuration duration);
 
 	/**
 	 * Sets the ban expires to the param date
