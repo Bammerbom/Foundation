@@ -15,18 +15,29 @@ Foundation is not a usable plugin by itself. We are creating Foundation-dependen
 
 #### Building
 #####Prerequires
-* [Java] 7
+* [Java SDK 6]
 * [Git]
-* [Maven]
 
 ##### Clone the repository
 Setup git, and run the following command in the Git Bash:
 
     $ git clone https://github.com/FoundationDevTeam/Foundation.git
+    $ cd Foundation
+    $ git submodule update --init --recursive
 
-##### Compile using Maven
+##### Compile using Gradle
+On Windows:
 
-    $ gradle
+    $ gradlew
+
+On Unix and Mac:
+
+	$ sh gradlew
+
+or if you encounter some problems
+
+	$ bash gradlew
+
 --------------------
 
 #### Contributing
@@ -38,11 +49,10 @@ If you are fixing an issue, you can just create a pull request.
 #### I found an issue!
 No software is absolutely perfect. If you found a bug or something else, please let us know by creating an issue. You can create an issue report here on GitHub. Please be as descriptive as possible, so a developer can fix the issue and create a pull request.
 
-[Forum thread]: http://forums.spongepowered.org/t/foundation-what-would-you-like-to-see/1525/83
+[Forum thread]: http://forums.spongepowered.org/t/1525/
 [Wiki]: https://github.com/FoundationDevTeam/Foundation/wiki
 [Issues]: https://github.com/FoundationDevTeam/Foundation/issues
 [Source code]: https://github.com/FoundationDevTeam/Foundation/tree/master/src
 
-[Java]: https://www.java.com/
+[Java SDK 6]: http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html
 [Git]: http://git-scm.com/
-[Maven]: http://maven.apache.org/download.cgi
