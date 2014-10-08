@@ -39,6 +39,7 @@ public class Version implements Comparable {
 
     public static Version createVersionFromString(String _versionString) {
         //TODO Implement this
+        return null;
     }
 
     public int getMajor() {
