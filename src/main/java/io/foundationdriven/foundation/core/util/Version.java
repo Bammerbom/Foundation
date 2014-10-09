@@ -34,9 +34,62 @@ package io.foundationdriven.foundation.core.util;
  */
 public class Version implements Comparable<Version> {
 
+    // Variables holding the major, minor, build and revision numbers.
     private int major, minor, build, revision;
 
-    public int compareTo(Version c) {
+    public Version(int _major, int _minor, int _build, int _revision) {
+        major = _major;
+        minor = _minor;
+        build = _build;
+        revision = _revision;
+    }
+
+    /**
+     * The <code>parseVersion</code> method creates a new
+     * <code>Version</code> object from a version string.
+     * The string must be in this format:
+     * <pre>
+     *     %i.%i.%i.%i
+     * </pre>
+     *
+     * @param versionString string holding a version number
+     * @return new instance of the <code>Version</code> class
+     * @since 2014-10-09
+     */
+    public static Version parseVersion(String versionString) {
+        // Variables for temporary holding the extracted version numbers.
+        int tmpMaj, tmpMin, tmpBuild, tmpRev;
+
+        // String array containing the extracted version numbers
+        String[] extracted = versionString.split("\\.");
+
+        // Initialize the temporary version numbers.
+        tmpMaj = Integer.parseInt(extracted[0]);
+        tmpMin = Integer.parseInt(extracted[1]);
+        tmpBuild = Integer.parseInt(extracted[2]);
+        tmpRev = Integer.parseInt(extracted[3]);
+
+        // Return a new Version object.
+        return new Version(tmpMaj, tmpMin, tmpBuild, tmpRev);
+    }
+
+    public int getMajor() {
+        return major;
+    }
+
+    public int getMinor() {
+        return minor;
+    }
+
+    public int getBuild() {
+        return build;
+    }
+
+    public int getRevision() {
+        return revision;
+    }
+
+    public int compareTo(Version o) {
         return 0;
     }
 }
