@@ -23,5 +23,5 @@
  */
 package io.foundationdriven.foundation.api.economy;
 
-public interface GlobalBalance {
+public interface Bank {
 }

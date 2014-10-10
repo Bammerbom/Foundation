@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.foundationdriven.foundation.api.economy;
+package io.foundationdriven.foundation.api.economy.owner;
 
-public interface LocalBalance {
+public interface VirtualAccountOwner {
 }
