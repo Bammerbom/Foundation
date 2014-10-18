@@ -21,19 +21,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.foundationdriven.foundation.api.economy;
+package io.foundationdriven.foundation.api.economy.exceptions;
 
-import io.foundationdriven.foundation.api.economy.currency.CurrencyAmount;
-import io.foundationdriven.foundation.api.economy.currency.Currency;
-import io.foundationdriven.foundation.api.economy.exceptions.InvalidCurrencyType;
+public class InvalidCurrencyType extends Exception {
 
-import java.util.List;
+    public InvalidCurrencyType(String exc) {
+        super(exc);
+    }
 
-public interface Bank {
-
-	CurrencyAmount getCurrencyAmount(Currency typeOfCurrency) throws InvalidCurrencyType;
-
-	List<Currency> getSupportedCurrencies();
-
-	boolean currencySupported(Currency typeOfCurrency);
+    public String getMessage() {
+        return super.getMessage();
+    }
 }

@@ -21,19 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.foundationdriven.foundation.api.economy;
+package io.foundationdriven.foundation.api.economy.account;
 
-import io.foundationdriven.foundation.api.economy.currency.CurrencyAmount;
-import io.foundationdriven.foundation.api.economy.currency.Currency;
-import io.foundationdriven.foundation.api.economy.exceptions.InvalidCurrencyType;
-
-import java.util.List;
-
-public interface Bank {
-
-	CurrencyAmount getCurrencyAmount(Currency typeOfCurrency) throws InvalidCurrencyType;
-
-	List<Currency> getSupportedCurrencies();
-
-	boolean currencySupported(Currency typeOfCurrency);
+public interface GroupAccountType extends AccountType {
 }

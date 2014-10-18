@@ -21,19 +21,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.foundationdriven.foundation.api.economy;
-
-import io.foundationdriven.foundation.api.economy.currency.CurrencyAmount;
-import io.foundationdriven.foundation.api.economy.currency.Currency;
-import io.foundationdriven.foundation.api.economy.exceptions.InvalidCurrencyType;
+package io.foundationdriven.foundation.api.economy.account;
 
 import java.util.List;
 
-public interface Bank {
+import org.spongepowered.api.entity.Player;
 
-	CurrencyAmount getCurrencyAmount(Currency typeOfCurrency) throws InvalidCurrencyType;
+public abstract interface GroupBankAccount extends BankAccount, GroupAccountType {	
 
-	List<Currency> getSupportedCurrencies();
+	List<String> getPlayerNames();
 
-	boolean currencySupported(Currency typeOfCurrency);
+	List<Player> getPlayers();
+
+	boolean playerInAccount(String playerName);
+
+	boolean playerInAccount(Player p);
 }

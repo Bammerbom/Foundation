@@ -24,4 +24,6 @@
 package io.foundationdriven.foundation.api.economy.currency;
 
 public interface Currency {
+
+	String getDisplayName();
 }

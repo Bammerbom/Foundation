@@ -23,5 +23,5 @@
  */
 package io.foundationdriven.foundation.api.economy.account;
 
-public interface BankAccount extends Account {
+public abstract interface BankAccount extends Account {
 }

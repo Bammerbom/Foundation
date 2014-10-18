@@ -23,5 +23,14 @@
  */
 package io.foundationdriven.foundation.api.economy.transaction;
 
+import io.foundationdriven.foundation.api.economy.discount.Discount;
+
+import java.math.BigInteger;
+
 public interface TransactionItem {
+	BigInteger getPrice();
+
+	boolean canDiscount();
+
+	boolean discountApplyies(Discount discount);
 }

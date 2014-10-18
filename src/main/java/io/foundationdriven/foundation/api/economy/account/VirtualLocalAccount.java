@@ -23,5 +23,5 @@
  */
 package io.foundationdriven.foundation.api.economy.account;
 
-public interface VirtualLocalAccount extends LocalAccount, VirtualAccountType {
+public abstract interface VirtualLocalAccount extends LocalAccount, VirtualAccountType {
 }

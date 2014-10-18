@@ -21,19 +21,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.foundationdriven.foundation.api.economy;
+package io.foundationdriven.foundation.api.economy.discount;
 
-import io.foundationdriven.foundation.api.economy.currency.CurrencyAmount;
-import io.foundationdriven.foundation.api.economy.currency.Currency;
-import io.foundationdriven.foundation.api.economy.exceptions.InvalidCurrencyType;
+import java.math.BigInteger;
 
-import java.util.List;
+public interface Discount() {
 
-public interface Bank {
+	BigInteger calculateDiscount(BigInteger originalPrice);
 
-	CurrencyAmount getCurrencyAmount(Currency typeOfCurrency) throws InvalidCurrencyType;
+	boolean isDiscountPercantage();
 
-	List<Currency> getSupportedCurrencies();
-
-	boolean currencySupported(Currency typeOfCurrency);
+	void setDiscount(BigInteger discount, boolean isPercentage);
 }

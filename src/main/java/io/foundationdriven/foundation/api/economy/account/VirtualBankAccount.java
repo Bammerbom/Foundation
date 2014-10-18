@@ -23,5 +23,5 @@
  */
 package io.foundationdriven.foundation.api.economy.account;
 
-public interface VirtualBankAccount extends BankAccount, VirtualAccountType {
+public abstract interface VirtualBankAccount extends BankAccount, VirtualAccountType {
 }
