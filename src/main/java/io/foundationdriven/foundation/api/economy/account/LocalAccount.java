@@ -23,5 +23,10 @@
  */
 package io.foundationdriven.foundation.api.economy.account;
 
+import io.foundationdriven.foundation.api.economy.limits.Limit;
+
 public abstract interface LocalAccount extends Account {
+	boolean isLimited();
+
+	Limit getLimit();
 }

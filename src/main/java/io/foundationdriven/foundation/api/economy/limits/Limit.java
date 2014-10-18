@@ -21,12 +21,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.foundationdriven.foundation.api.economy.account;
+package io.foundationdriven.foundation.api.economy.limits;
 
-import io.foundationdriven.foundation.api.economy.limits.Limit;
+public interface Limit {
 
-public abstract interface BankAccount extends Account {
-	boolean isLimited();
+	String getLimiter();
 
-	Limit getLimit();
+	Account limitedAccount();
+
+	void setLimit(Account toLimit, String limiter);
+
+	//Perhaps add in some sort of non-permanent limit? Like a time?
 }
