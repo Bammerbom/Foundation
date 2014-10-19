@@ -23,6 +23,8 @@
  */
 package io.foundationdriven.foundation.api.ban;
 
+import java.util.UUID;
+
 /**
  * A BanTarget is a target that has been banned.
  * It can be either an IP or a Player.
@@ -30,4 +32,6 @@ package io.foundationdriven.foundation.api.ban;
 public interface BanTarget {
 
 	String getTargetName();
+
+	UUID getTargetUUID();
 }

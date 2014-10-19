@@ -23,6 +23,8 @@
  */
 package io.foundationdriven.foundation.api.economy;
 
+import io.foundationdriven.foundation.api.economy.currency.Currency;
+
 import java.util.List;
 import java.util.UUID;
 
@@ -31,6 +33,8 @@ public interface EconomyManager {
 	List<Bank> getBanks();
 
 	void addBank(Bank bank);
+
+	List<Bank> getBanksByName(String name);
 
 	List<Bank> banksThatSupportCurrency(Currency currency);
 
@@ -43,4 +47,16 @@ public interface EconomyManager {
 	void blacklistBank(UUID uuid);
 
 	Bank getBankByBankID(UUID bankID);
+
+	void addCurrencyToBank(Bank bank, Currency currency);
+
+	void addCurrenciesToBank(Bank bank, List<Currency> currencies);
+
+	void addCurrencyToBank(List<Bank> banks, Currency currency);
+
+	void addCurrenciesToBanks(List<Bank> banks, List<Currency> currencies);
+
+	void addCurrencyToAll(Currency toAdd);
+
+	void addCurrenciesToAll(List<Currency> toAdd);
 }

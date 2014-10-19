@@ -23,5 +23,8 @@
  */
 package io.foundationdriven.foundation.api.economy.account;
 
-public interface GroupAccountType extends AccountType {
+public abstract interface GroupAccountType extends AccountType {
+	boolean isVirtual() {return false;}
+
+	boolean isGroup(){return true;}
 }

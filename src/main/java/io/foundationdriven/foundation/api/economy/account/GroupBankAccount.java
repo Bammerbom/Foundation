@@ -29,6 +29,8 @@ import org.spongepowered.api.entity.Player;
 
 public abstract interface GroupBankAccount extends BankAccount, GroupAccountType {	
 
+	boolean isLocal() {return false;}
+
 	List<String> getPlayerNames();
 
 	List<Player> getPlayers();

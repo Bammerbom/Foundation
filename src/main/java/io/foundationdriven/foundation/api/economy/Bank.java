@@ -28,6 +28,8 @@ import io.foundationdriven.foundation.api.economy.currency.Currency;
 import io.foundationdriven.foundation.api.economy.exceptions.InvalidCurrencyType;
 import io.foundationdriven.foundation.api.economy.account.Account;
 
+import org.spongepowered.api.entity.Player;
+
 import java.util.List;
 import java.util.UUID;
 
@@ -48,4 +50,10 @@ public interface Bank {
 	UUID getBankID();
 
 	void registerAccount(Account account);
+
+	List<Account> getAccountsOfPlayer(Player p);
+
+	List<Account> getAccountsOfPlayer(String playerName);
+
+	String getName();
 }

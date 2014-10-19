@@ -26,9 +26,18 @@ package io.foundationdriven.foundation.api.economy.account;
 import java.math.BigInteger;
 import java.util.UUID;
 
+import org.spongepowered.api.entity.Player;
+
 public interface Account {
 
 	BigInteger getMaxAmount();
 
 	UUID getAccountID();
+
+	AccountType getAccountType();
+
+	/**
+	 * Will return list size of one if single player account.
+	 */
+	List<Player> getPlayers();
 }

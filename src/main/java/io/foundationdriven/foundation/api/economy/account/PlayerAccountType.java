@@ -23,5 +23,8 @@
  */
 package io.foundationdriven.foundation.api.economy.account;
 
-public interface PlayerAccountType extends AccountType {
+public abstract interface PlayerAccountType extends AccountType {
+	
+	boolean isGroup() {return false;}
+	
 }
