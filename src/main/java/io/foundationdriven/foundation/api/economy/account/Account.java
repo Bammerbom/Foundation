@@ -23,5 +23,9 @@
  */
 package io.foundationdriven.foundation.api.economy.account;
 
+import java.math.BigInteger;
+
 public interface Account {
+
+	BigInteger getMaxAmount();
 }

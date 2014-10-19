@@ -21,7 +21,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.foundationdriven.foundation.api.economy.account;
+package io.foundationdriven.foundation.api.economy.limits;
 
-public abstract interface VirtualLocalAccount extends LocalAccount, VirtualAccountType {
+public interface Limit {
+
+	String getLimiter();
+
+	Account limitedAccount();
+
+	void setLimit(Account toLimit, String limiter);
+
+	//Perhaps add in some sort of non-permanent limit? Like a time?
 }

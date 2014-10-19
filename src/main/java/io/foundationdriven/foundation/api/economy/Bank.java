@@ -23,5 +23,20 @@
  */
 package io.foundationdriven.foundation.api.economy;
 
+import io.foundationdriven.foundation.api.economy.currency.CurrencyAmount;
+import io.foundationdriven.foundation.api.economy.currency.Currency;
+import io.foundationdriven.foundation.api.economy.exceptions.InvalidCurrencyType;
+import io.foundationdriven.foundation.api.economy.account.Account;
+
+import java.util.List;
+
 public interface Bank {
+
+	CurrencyAmount getCurrencyAmount(Currency typeOfCurrency) throws InvalidCurrencyType;
+
+	List<Currency> getSupportedCurrencies();
+
+	boolean currencySupported(Currency typeOfCurrency);
+
+	List<Account> getAccounts();
 }

@@ -23,5 +23,5 @@
  */
 package io.foundationdriven.foundation.api.economy.account;
 
-public interface PlayerLocalAccount extends LocalAccount, PlayerAccountType {
+public abstract interface PlayerLocalAccount extends LocalAccount, PlayerAccountType {
 }

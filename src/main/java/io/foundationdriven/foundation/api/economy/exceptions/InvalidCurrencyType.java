@@ -21,7 +21,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.foundationdriven.foundation.api.economy.account;
+package io.foundationdriven.foundation.api.economy.exceptions;
 
-public abstract interface VirtualLocalAccount extends LocalAccount, VirtualAccountType {
+public class InvalidCurrencyType extends Exception {
+
+    public InvalidCurrencyType(String exc) {
+        super(exc);
+    }
+
+    public String getMessage() {
+        return super.getMessage();
+    }
 }

@@ -21,7 +21,15 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.foundationdriven.foundation.api.economy.account;
+package io.foundationdriven.foundation.api.economy.discount;
 
-public abstract interface VirtualLocalAccount extends LocalAccount, VirtualAccountType {
+import java.math.BigInteger;
+
+public interface Discount() {
+
+	BigInteger calculateDiscount(BigInteger originalPrice);
+
+	boolean isDiscountPercantage();
+
+	void setDiscount(BigInteger discount, boolean isPercentage);
 }

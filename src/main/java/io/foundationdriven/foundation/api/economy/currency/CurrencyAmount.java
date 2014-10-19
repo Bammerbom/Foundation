@@ -23,5 +23,11 @@
  */
 package io.foundationdriven.foundation.api.economy.currency;
 
+import java.math.BigInteger;
+
 public interface CurrencyAmount {
+
+	BigInteger getMaxValue();
+
+	void setMaxValue(BigInteger newMaxValue);
 }

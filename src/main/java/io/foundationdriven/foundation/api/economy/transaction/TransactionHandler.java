@@ -23,5 +23,8 @@
  */
 package io.foundationdriven.foundation.api.economy.transaction;
 
+import io.foundationdriven.foundation.api.economy.discount.Discount;
+
 public interface TransactionHandler {
+	void transact(TransactionItem item, Discount discount, Account buyer, Account seller);
 }

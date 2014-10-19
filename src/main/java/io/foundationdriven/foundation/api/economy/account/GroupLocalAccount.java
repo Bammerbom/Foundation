@@ -23,5 +23,18 @@
  */
 package io.foundationdriven.foundation.api.economy.account;
 
-public abstract interface VirtualLocalAccount extends LocalAccount, VirtualAccountType {
+import java.util.List;
+
+import org.spongepowered.api.entity.Player;
+
+public abstract interface GroupLocalAccount extends LocalAccount, GroupAccountType {
+
+	List<String> getPlayerNames();
+
+	List<Player> getPlayers();
+
+	boolean playerInAccount(String playerName);
+
+	boolean playerInAccount(Player p);
+	
 }
