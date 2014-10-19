@@ -29,6 +29,7 @@ import io.foundationdriven.foundation.api.economy.exceptions.InvalidCurrencyType
 import io.foundationdriven.foundation.api.economy.account.Account;
 
 import java.util.List;
+import java.util.UUID;
 
 public interface Bank {
 
@@ -39,4 +40,12 @@ public interface Bank {
 	boolean currencySupported(Currency typeOfCurrency);
 
 	List<Account> getAccounts();
+
+	List<UUID> getAccountID();
+
+	boolean accountSupportedForTransaction(Account account);
+
+	UUID getBankID();
+
+	void registerAccount(Account account);
 }

@@ -23,5 +23,24 @@
  */
 package io.foundationdriven.foundation.api.economy;
 
+import java.util.List;
+import java.util.UUID;
+
 public interface EconomyManager {
+
+	List<Bank> getBanks();
+
+	void addBank(Bank bank);
+
+	List<Bank> banksThatSupportCurrency(Currency currency);
+
+	void setDefaultBank(Bank bank);
+
+	Bank getDefaultBank();
+
+	List<Bank> blacklistedBanks();
+
+	void blacklistBank(UUID uuid);
+
+	Bank getBankByBankID(UUID bankID);
 }

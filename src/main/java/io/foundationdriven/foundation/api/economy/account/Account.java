@@ -24,8 +24,11 @@
 package io.foundationdriven.foundation.api.economy.account;
 
 import java.math.BigInteger;
+import java.util.UUID;
 
 public interface Account {
 
 	BigInteger getMaxAmount();
+
+	UUID getAccountID();
 }
