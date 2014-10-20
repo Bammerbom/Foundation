@@ -21,21 +21,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.foundationdriven.foundation.api.economy.account;
+package io.foundationdriven.foundation.api.scripting;
 
-import java.util.List;
-
-import org.spongepowered.api.entity.Player;
-
-public abstract interface GroupLocalAccount extends LocalAccount, GroupAccountType {
-
-	boolean isLocal() {return true;}
-
-	List<String> getPlayerNames();
-
-	List<Player> getPlayers();
-
-	boolean playerInAccount(String playerName);
-
-	boolean playerInAccount(Player p);	
+public enum Language {
+	PYTHON, JAVASCRIPT, LUA
 }

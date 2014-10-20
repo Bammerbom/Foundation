@@ -46,6 +46,13 @@ public class Foundation {
     @Nullable
     Logger logger = null;
 
+    EconomyManager ecoManager;
+    static Foundation foundation;
+
+    public Foundation() {
+        foundation = this;
+    }
+
     @SpongeEventHandler
     public void onInit(PreInitializationEvent event) {
         org.apache.logging.log4j.Logger pluginLogger = event.getPluginLog();
@@ -67,4 +74,9 @@ public class Foundation {
         logger = _logger;
     }
 
+    public void setEconomyManager(EconomyManager manager) {ecoManager = manager;}
+
+    public EconomyManager getEconomyManager() {return ecoManager;}
+
+    public static Foundation getFoundation() {return foundation;}
 }

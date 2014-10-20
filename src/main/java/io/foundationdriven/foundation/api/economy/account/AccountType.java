@@ -24,4 +24,9 @@
 package io.foundationdriven.foundation.api.economy.account;
 
 public interface AccountType {
+	boolean isLocal();
+
+	boolean isVirtual();
+
+	boolean isGroup();
 }

@@ -46,5 +46,4 @@ public interface Logger {
 	void severe(String msg);
 
 	void severe(String[] msg);
-
 }

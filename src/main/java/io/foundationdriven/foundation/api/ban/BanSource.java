@@ -23,6 +23,8 @@
  */
 package io.foundationdriven.foundation.api.ban;
 
+import java.util.UUID;
+
 /**
  * BanSource is the source of a ban. It can be either a
  * Player, a Console or System(plugin).
@@ -31,4 +33,9 @@ public interface BanSource {
 
 	String getSourceName();
 
+	UUID getSourceUUID();
+
+	boolean isConsole();
+
+	boolean isPlugin();
 }

@@ -24,4 +24,5 @@
 package io.foundationdriven.foundation.api.economy.account;
 
 public abstract interface VirtualBankAccount extends BankAccount, VirtualAccountType {
+	boolean isLocal(){return false;}
 }

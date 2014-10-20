@@ -21,21 +21,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package io.foundationdriven.foundation.api.economy.account;
+package io.foundationdriven.foundation.api.scripting;
 
-import java.util.List;
+public interface ScriptingManager {
 
-import org.spongepowered.api.entity.Player;
+	List<Script> getLoadedScripts();
 
-public abstract interface GroupLocalAccount extends LocalAccount, GroupAccountType {
-
-	boolean isLocal() {return true;}
-
-	List<String> getPlayerNames();
-
-	List<Player> getPlayers();
-
-	boolean playerInAccount(String playerName);
-
-	boolean playerInAccount(Player p);	
+	List<Script> getLoadedScripts(Language language);
 }

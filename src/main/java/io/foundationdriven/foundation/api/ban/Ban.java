@@ -114,5 +114,4 @@ public interface Ban {
 	 * Pardons the ban
 	 */
 	void pardon();
-
 }
