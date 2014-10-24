@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?> 
+<projectDescription> 
+    <name>Foundation</name> 
+    <comment>This is a cool project.</comment> 
+    <projects> 
+        <project>io.foundationdriven.foundation</project> 
+        <project>Foundation</project> 
+    </projects> 
+</projectDescription> 
