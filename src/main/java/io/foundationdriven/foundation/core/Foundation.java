@@ -74,17 +74,17 @@ public class Foundation {
     public void onInit(PreInitializationEvent event) {
         org.apache.logging.log4j.Logger pluginLogger = event.getPluginLog();
         logger = new DefaultLogger(pluginLogger);
-        logger.info("Foundation initialization");
+        logger.info(messages.getString("on-init"));
     }
 
     @SpongeEventHandler
     public void onStart(ServerStartingEvent event) {
-        logger.info("Foundation start");
+        logger.info(messages.getString("on-start"));
     }
 
     @SpongeEventHandler
     public void onStop(ServerStoppingEvent event) {
-        logger.info("Foundation stop");
+        logger.info(messages.getString("on-stop"));
     }
 
     public void setLogger(Logger _logger) {
