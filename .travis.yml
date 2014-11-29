@@ -4,4 +4,4 @@ notifications:
 install: false
 script:
   - git submodule update --init --recursive
-  - gradlew
+  - ./gradlew
