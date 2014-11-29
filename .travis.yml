@@ -4,4 +4,4 @@ notifications:
 matrix:
   include:
   - jdk: openjdk7
-    script: gradle build
+  - script: gradle build
