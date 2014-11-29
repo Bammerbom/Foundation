@@ -1,4 +1,4 @@
-language: openjdk6
+language: java
 notifications:
   email: false
 install: false
