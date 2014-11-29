@@ -2,6 +2,3 @@ language: openjdk6
 notifications:
   email: false
 install: false
-script:
-  - git submodule update --init --recursive
-  - ./gradlew
