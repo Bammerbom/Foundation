@@ -1,6 +1,8 @@
 language: java
-script:
-  - git submodule update --init --recursive
-  - gradle clean
-  - gradle licenseFormat
-  - gradle build
+jdk:
+  - oraclejdk6
+  - openjdk6
+ 
+before_install:
+ - chmod +x gradlew
+ 
