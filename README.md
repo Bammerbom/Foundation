@@ -7,9 +7,7 @@ Foundation
 * [Issues]
 * [Source code]
 
-Foundation is a Sponge plugin which establishes a plugin infrastructure. It defines a set of APIs and implementations, such as general classes and methods and economy, but also helper classes and methods for other plugins.
-
-Foundation is not a usable plugin by itself. We are creating Foundation-dependent plugins which can add core functionality to your server, like commands for server administration, survival-and creative servers, economy and such.
+Foundation is an Essentials-replacement for Sponge. Rather than providing all functionality in one plugin, Foundation is modular, and you choose what you want to have installed. We (and other developers) are developing Modules using the Foundation API, which are loaded by the Foundation plugin. Using this system, you don't have unnecessary functionality installed on your server, which results in better performance.
 
 --------------------
 
