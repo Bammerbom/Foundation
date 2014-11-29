@@ -1,4 +1,4 @@
-Foundation [![Build Status](https://travis-ci.org/FoundationDriven/Foundation.svg?branch=master)](https://travis-ci.org/FoundationDriven/Foundation)
+Foundation
 ==========
 **Foundation is still WIP, and cannot be tested yet**
 
