@@ -3,5 +3,5 @@ notifications:
   email: false
 matrix:
   include:
-  - jdk: openjdk7
+  - jdk: openjdk6
   - script: gradle build
