@@ -23,11 +23,32 @@
  */
 package io.foundationdriven.foundation.api.module;
 
+/**
+ * The <code>Loadable</code> interface must be implemented by every
+ * modules main class (which also has the "@Module" annotation) in
+ * order to be loaded correctly. This interface provides methods which
+ * are called at different stages of the server.
+ *
+ * @version 1.0.0
+ * @since 2014-12-01
+ */
 public interface Loadable {
 
+    /**
+     * The <code>onServerStarting</code> method is called immediately
+     * after the module is loaded.
+     */
     public void onServerStarting();
 
+    /**
+     * The <code>onServerStarted</code> method is called when the
+     * server is started.
+     */
     public void onServerStarted();
 
+    /**
+     * The <code>onServerStopping</code> method is called when the
+     * server is stopping.
+     */
     public void onServerStopping();
 }

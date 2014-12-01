@@ -28,15 +28,45 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+/**
+ * The <code>Module</code> annotation is used to indicate the
+ * main class of a module, the name of the module, the version
+ * of the module, the minimum required version of Foundation for
+ * the module, and the maximum version of Foundation.
+ *
+ * @version 1.0.0
+ * @since 2014-12-01
+ */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Module {
 
+    /**
+     * A name for the module to be used globally.
+     *
+     * @return The name of the module
+     */
     String name();
 
+    /**
+     * A version for the module to be used globally.
+     *
+     * @return The version of the module
+     */
     String version();
 
+    /**
+     * The minimum version of Foundation that is required to load and
+     * use the module.
+     *
+     * @return The minimum required version of the module
+     */
     String minFoundationVersion();
 
+    /**
+     * The maximum version of Foundation.
+     *
+     * @return The maximum version of Foundation.
+     */
     String maxFoundationVersion();
 }
