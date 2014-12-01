@@ -23,13 +23,12 @@
  */
 package io.foundationdriven.foundation.core;
 
-import io.foundationdriven.foundation.api.logger.Logger;
-import io.foundationdriven.foundation.core.logger.DefaultLogger;
-import org.spongepowered.api.event.SpongeEventHandler;
+import org.apache.logging.log4j.Logger;
 import org.spongepowered.api.event.state.PreInitializationEvent;
 import org.spongepowered.api.event.state.ServerStartingEvent;
 import org.spongepowered.api.event.state.ServerStoppingEvent;
 import org.spongepowered.api.plugin.Plugin;
+import org.spongepowered.api.util.event.Subscribe;
 
 import javax.annotation.Nullable;
 
@@ -45,55 +44,23 @@ public class Foundation {
 
     @Nullable
     Logger logger = null;
-    String language;
-    String country;
 
-    if (args.length != 2) {
-        language = new String("en");
-        country = new String("US");
-    } else {
-        language = new String(args[0]);
-        country = new String(args[1]);
-    }
-
-    Locale currentLocale;
-    ResourceBundle messages;
-
-    currentLocale = new Locale(language, country);
-
-    messages = ResourceBundle.getBundle("Locale", currentLocale);
-
-    EconomyManager ecoManager;
-    static Foundation foundation;
-
-    public Foundation() {
-        foundation = this;
-    }
-
-    @SpongeEventHandler
+    @Subscribe
     public void onInit(PreInitializationEvent event) {
-        org.apache.logging.log4j.Logger pluginLogger = event.getPluginLog();
-        logger = new DefaultLogger(pluginLogger);
-        logger.info(messages.getString("on-init"));
+        logger = (Logger) event.getPluginLog();
     }
 
-    @SpongeEventHandler
+    @Subscribe
     public void onStart(ServerStartingEvent event) {
-        logger.info(messages.getString("on-start"));
+        //TODO onStart
     }
 
-    @SpongeEventHandler
+    @Subscribe
     public void onStop(ServerStoppingEvent event) {
-        logger.info(messages.getString("on-stop"));
+        //TODO onStop
     }
 
     public void setLogger(Logger _logger) {
         logger = _logger;
     }
-
-    public void setEconomyManager(EconomyManager manager) {ecoManager = manager;}
-
-    public EconomyManager getEconomyManager() {return ecoManager;}
-
-    public static Foundation getFoundation() {return foundation;}
 }

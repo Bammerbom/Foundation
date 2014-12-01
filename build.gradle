@@ -15,10 +15,14 @@ targetCompatibility = 1.6
 
 repositories {
     mavenCentral()
+    maven {
+        name 'Sponge maven repo'
+        url 'http://repo.spongepowered.org/Sponge/maven'
+    }
 }
 
 dependencies {
-    compile project('SpongeAPI')
+    compile "org.spongepowered:spongeapi:1.0"
 }
 
 license {
