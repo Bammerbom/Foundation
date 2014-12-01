@@ -25,6 +25,8 @@ package io.foundationdriven.foundation.core;
 
 import org.spongepowered.api.plugin.Plugin;
 
+import javax.annotation.Nullable;
+
 /**
  * Foundation is a Sponge plugin which provides core functionality
  * to the server. It also provides an API for other plugins
@@ -35,4 +37,18 @@ import org.spongepowered.api.plugin.Plugin;
 @Plugin(id = "Foundation", name = "Foundation", version = "1.0.0")
 public class Foundation {
 
+    @Nullable
+    private static Foundation instance = null;
+
+    public Foundation() throws IllegalStateException {
+        if (instance != null) throw new IllegalStateException("A Foundation instance is already initialized");
+        instance = this;
+    }
+
+    public static Foundation getInstance() {
+        if (instance == null) throw new IllegalStateException("Cannot get a null instance");
+        synchronized (Foundation.class) {
+            return instance != null ? instance : null;
+        }
+    }
 }
