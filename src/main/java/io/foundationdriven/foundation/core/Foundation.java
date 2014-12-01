@@ -23,7 +23,12 @@
  */
 package io.foundationdriven.foundation.core;
 
+import org.spongepowered.api.event.state.PreInitializationEvent;
+import org.spongepowered.api.event.state.ServerStartedEvent;
+import org.spongepowered.api.event.state.ServerStartingEvent;
+import org.spongepowered.api.event.state.ServerStoppingEvent;
 import org.spongepowered.api.plugin.Plugin;
+import org.spongepowered.api.util.event.Subscribe;
 
 import javax.annotation.Nullable;
 
@@ -50,5 +55,25 @@ public class Foundation {
         synchronized (Foundation.class) {
             return instance != null ? instance : null;
         }
+    }
+
+    @Subscribe
+    public void onPreInitialization(final PreInitializationEvent event) {
+        // Map all modules, configurations, child plugins etc.
+        // Initialize everything.
+    }
+
+    public void onServerStarting(final ServerStartingEvent event) {
+        // Load all modules, configurations, child plugins etc.
+    }
+
+    @Subscribe
+    public void onServerStarted(final ServerStartedEvent event) {
+        // Make sure nothing went wrong.
+    }
+
+    @Subscribe
+    public void onServerStopping(final ServerStoppingEvent event) {
+        // Save and unload everything safely.
     }
 }
