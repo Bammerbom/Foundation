@@ -23,14 +23,7 @@
  */
 package io.foundationdriven.foundation.core;
 
-import org.apache.logging.log4j.Logger;
-import org.spongepowered.api.event.state.PreInitializationEvent;
-import org.spongepowered.api.event.state.ServerStartingEvent;
-import org.spongepowered.api.event.state.ServerStoppingEvent;
 import org.spongepowered.api.plugin.Plugin;
-import org.spongepowered.api.util.event.Subscribe;
-
-import javax.annotation.Nullable;
 
 /**
  * Foundation is a Sponge plugin which provides core functionality
@@ -42,25 +35,4 @@ import javax.annotation.Nullable;
 @Plugin(id = "Foundation", name = "Foundation", version = "1.0.0")
 public class Foundation {
 
-    @Nullable
-    Logger logger = null;
-
-    @Subscribe
-    public void onInit(PreInitializationEvent event) {
-        logger = (Logger) event.getPluginLog();
-    }
-
-    @Subscribe
-    public void onStart(ServerStartingEvent event) {
-        //TODO onStart
-    }
-
-    @Subscribe
-    public void onStop(ServerStoppingEvent event) {
-        //TODO onStop
-    }
-
-    public void setLogger(Logger _logger) {
-        logger = _logger;
-    }
 }
