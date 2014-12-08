@@ -6,8 +6,8 @@ We love contributions from others!
 You will need the following tools to develop for Foundation:-
     
   * Git or Github for Windows/Mac OSX.
-  * Maven.
   * Eclipse, IntelliJ IDEA or any othe IDE that suits you.
+  * (optionally) Gradle
 
 ## Guidelines
 Before you send a PR, make sure your code does follow these guidelines:
@@ -20,8 +20,8 @@ Before you send a PR, make sure your code does follow these guidelines:
 In case you don't know about the pull request system, click [here](https://help.github.com/articles/using-pull-requests/) for the github article.
 When writing your pull request make sure to include...
   * The changes you made
-  * How these changes affect the API ( Are the changes backwards comatible? )
-  * The approximate size of the changes ( Just big, medium or small )
+  * How these changes affect the API (are the changes backwards compatible?)
+  * The approximate size of the changes (big, medium or small)
   * Why you think these changes are neccessary
 	
 Don't be offended if we ask questions / Ask for some changes
