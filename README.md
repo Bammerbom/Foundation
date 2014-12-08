@@ -6,6 +6,7 @@ Foundation
 * [Wiki]
 * [Issues]
 * [Source code]
+* [Twitter]
 
 Foundation is an Essentials-replacement for Sponge. Rather than providing all functionality in one plugin, Foundation is modular, and you choose what you want to have installed. We (and other developers) are developing Modules using the Foundation API, which are loaded by the Foundation plugin. Using this system, you don't have unnecessary functionality installed on your server, which results in better performance.
 
@@ -51,6 +52,7 @@ No software is absolutely perfect. If you found a bug or something else, please 
 [Wiki]: https://github.com/FoundationDevTeam/Foundation/wiki
 [Issues]: https://github.com/FoundationDevTeam/Foundation/issues
 [Source code]: https://github.com/FoundationDevTeam/Foundation/tree/master/src
+[Twitter]: https://twitter.com/foundationdev
 
 [Java SDK 6]: http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html
 [Git]: http://git-scm.com/
