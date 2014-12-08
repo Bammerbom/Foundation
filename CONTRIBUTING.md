@@ -3,7 +3,8 @@ Contributing to Foundation
 We love contributions from others!
 # Code
 ## Prerequisites
-You will need the following tools to develop for Foundation
+You will need the following tools to develop for Foundation:-
+    
     * Git or Github for Windows/Mac OSX.
     * Maven.
     * Eclipse, IntelliJ IDEA or any othe IDE that suits you.
