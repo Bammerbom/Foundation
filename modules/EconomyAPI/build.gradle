@@ -10,8 +10,8 @@ defaultTasks 'clean', 'licenseFormat', 'build'
 group = 'io.foundationdriven'
 version = '0.0.1-DEV'
 
-sourceCompatibility = 1.6
-targetCompatibility = 1.6
+sourceCompatibility = 7
+targetCompatibility = 7
 
 repositories {
     mavenCentral()
