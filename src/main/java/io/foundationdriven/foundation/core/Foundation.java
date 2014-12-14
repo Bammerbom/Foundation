@@ -72,6 +72,7 @@ public class Foundation {
         gameInstance = event.getGame();
     }
 
+    @Subscribe
     public void onServerStarting(final ServerStartingEvent event) {
         // Load all modules, configurations, child plugins etc.
     }
