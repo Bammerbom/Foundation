@@ -23,6 +23,7 @@
  */
 package io.foundationdriven.foundation.core;
 
+import org.slf4j.Logger;
 import org.spongepowered.api.Game;
 import org.spongepowered.api.event.state.PreInitializationEvent;
 import org.spongepowered.api.event.state.ServerStartedEvent;
@@ -47,6 +48,8 @@ public class Foundation {
     private static Foundation instance = null;
     @Nullable
     private static Game gameInstance = null;
+    @Nullable
+    private static Logger loggerInstance = null;
 
     public Foundation() throws IllegalStateException {
         if (instance != null) throw new IllegalStateException("A Foundation instance is already initialized");
@@ -64,11 +67,17 @@ public class Foundation {
         return gameInstance;
     }
 
+    public static Logger getLoggerInstance() {
+        if (loggerInstance == null) throw new IllegalStateException("Cannot get a null logger");
+        return loggerInstance;
+    }
+
     @Subscribe
     public void onPreInitialization(final PreInitializationEvent event) {
         // Map all modules, configurations, child plugins etc.
         // Initialize everything.
         instance = this;
+        loggerInstance = event.getPluginLog();
         gameInstance = event.getGame();
     }
 
