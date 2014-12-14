@@ -2,6 +2,7 @@ Contributing to Foundation
 ==========================
 We love contributions from others!
 # Code
+**Any contributed code immediately becomes licensed under the MIT license**
 ## Prerequisites
 You will need the following tools to develop for Foundation:-
     
