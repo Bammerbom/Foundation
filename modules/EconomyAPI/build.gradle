@@ -13,6 +13,14 @@ version = '0.0.1-DEV'
 sourceCompatibility = 7
 targetCompatibility = 7
 
+sourceSets {
+    test
+}
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+    testRuntime 'org.ow2.asm:asm-all:4.0'
+}
 repositories {
     mavenCentral()
     maven {
