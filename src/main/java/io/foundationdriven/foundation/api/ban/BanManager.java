@@ -1,6 +1,4 @@
-package io.foundationdriven.foundation.ban;
-
-import org.spongepowered.api.entity.player.Player;
+package io.foundationdriven.foundation.api.ban;
 
 /**
  * When a setBanned() or setUnbanned(), etc. is called this class will perform the desired action.
