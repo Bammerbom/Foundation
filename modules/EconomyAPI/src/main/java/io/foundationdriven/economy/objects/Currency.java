@@ -1,5 +1,7 @@
 package io.foundationdriven.economy.objects;
 
+import io.foundationdriven.economy.errors.InvalidGlobalValue;
+
 /**
  * Represents a currency
  * @see io.foundationdriven.economy.managers.CurrencyManager
@@ -75,7 +77,8 @@ public class Currency {
      * @param globalValue the new global value
      */
     public void setGlobalValue(Integer globalValue) {
-        this.globalValue = globalValue;
+        if (globalValue < 0) throw new InvalidGlobalValue(globalValue);
+        else this.globalValue = globalValue;
     }
 
     /**

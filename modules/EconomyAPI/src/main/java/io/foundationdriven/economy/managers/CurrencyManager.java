@@ -1,5 +1,6 @@
 package io.foundationdriven.economy.managers;
 
+import io.foundationdriven.economy.errors.InvalidGlobalValue;
 import io.foundationdriven.economy.objects.Currency;
 
 import java.util.ArrayList;
@@ -39,6 +40,7 @@ public class CurrencyManager {
      */
     public static Currency createCurrency(String name, String plural, Integer globalValue){
         if (getCurrency(name) != null) return getCurrency(name);
+        else if(globalValue < 0) throw new InvalidGlobalValue(globalValue);
         else{
             Currency newCurrency = new Currency(name, plural, globalValue);
             currencies.add(newCurrency);
