@@ -1,5 +1,6 @@
-echo 'BOOTSTRAPPING';
-echo "Foundation by FoundationDriven";
+echo "== FOUNDATION BOOTSTRAP ==";
+echo "This bootstrap script will setup the neccesary project files";
+echo "for your IDE";
 echo 'Eclipse or IDEA? (e or i)';
 read IDE
 case $IDE in
