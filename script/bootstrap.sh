@@ -1,3 +1,5 @@
+#!/bin/sh
+
 echo 'BOOTSTRAPPING';
 echo "Foundation by FoundationDriven";
 echo 'Eclipse or IDEA? (e or i)';
