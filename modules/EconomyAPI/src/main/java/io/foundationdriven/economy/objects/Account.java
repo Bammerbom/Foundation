@@ -1,6 +1,7 @@
 package io.foundationdriven.economy.objects;
 
 import io.foundationdriven.economy.errors.InvalidAmount;
+import io.foundationdriven.economy.errors.NotEnoughMoney;
 
 import java.util.HashMap;
 import java.util.UUID;
@@ -117,6 +118,7 @@ public class Account {
             val = amounts.get(c);
         }
         val -= a;
+        if (val <= 0) throw new NotEnoughMoney(a, amounts.get(c));
         amounts.put(c, val);
         return this;
     }

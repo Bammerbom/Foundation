@@ -53,6 +53,7 @@ public class AccountManager {
      */
     public static Account createAccount(String name){
         Account newAccount = new Account(name);
+        accounts.add(newAccount);
         return newAccount;
     }
 
@@ -93,5 +94,13 @@ public class AccountManager {
                 a.getAmounts().remove(purge);
             }
         }
+    }
+
+    /**
+     * Unregisters an account
+     * @param a The account to unregister
+     */
+    public static void unregisterAccount(Account a){
+        if (accounts.contains(a)) accounts.remove(a);
     }
 }
