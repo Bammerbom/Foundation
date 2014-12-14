@@ -22,7 +22,6 @@ Setup git, and run the following command in the Git Bash:
 
     $ git clone https://github.com/FoundationDevTeam/Foundation.git
     $ cd Foundation
-    $ git submodule update --init --recursive
 
 ##### Compile using Gradle
 On Windows:
