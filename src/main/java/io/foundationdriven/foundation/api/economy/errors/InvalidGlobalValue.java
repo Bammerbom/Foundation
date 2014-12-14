@@ -1,4 +1,4 @@
-package io.foundationdriven.economy.errors;
+package io.foundationdriven.foundation.api.economy.errors;
 
 /**
  * This is thrown when an invalid global value is passed into a currency

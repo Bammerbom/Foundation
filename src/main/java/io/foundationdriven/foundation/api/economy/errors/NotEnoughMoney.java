@@ -1,4 +1,4 @@
-package io.foundationdriven.economy.errors;
+package io.foundationdriven.foundation.api.economy.errors;
 
 /**
  * Thrown when an account does not have enough money to perform a transaction

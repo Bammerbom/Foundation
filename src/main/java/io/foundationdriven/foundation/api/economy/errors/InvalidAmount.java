@@ -1,4 +1,4 @@
-package io.foundationdriven.economy.errors;
+package io.foundationdriven.foundation.api.economy.errors;
 
 /**
  * This is thrown when an invalid amount is passed into give or take methods
