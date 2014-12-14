@@ -2,8 +2,8 @@ plugins {
     id "java"
     id "idea"
     id "eclipse"
-    id "com.github.hierynomus.license" version "0.11.0"
 }
+apply plugin: "com.github.hierynomus.license"
 
 defaultTasks 'clean', 'licenseFormat', 'build'
 
@@ -26,7 +26,7 @@ dependencies {
 }
 
 license {
-    header file('LICENSE')
+    header file('../../LICENSE')
     ignoreFailures false
     strictCheck true
     mapping {
