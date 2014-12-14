@@ -23,6 +23,7 @@
  */
 package io.foundationdriven.foundation.core;
 
+import org.spongepowered.api.Game;
 import org.spongepowered.api.event.state.PreInitializationEvent;
 import org.spongepowered.api.event.state.ServerStartedEvent;
 import org.spongepowered.api.event.state.ServerStartingEvent;
@@ -44,6 +45,8 @@ public class Foundation {
 
     @Nullable
     private static Foundation instance = null;
+    @Nullable
+    private static Game gameInstance = null;
 
     public Foundation() throws IllegalStateException {
         if (instance != null) throw new IllegalStateException("A Foundation instance is already initialized");
@@ -57,10 +60,16 @@ public class Foundation {
         }
     }
 
+    public static Game getGameInstance() {
+        if (gameInstance == null) throw new IllegalStateException("Cannot get a null game");
+        return gameInstance;
+    }
+
     @Subscribe
     public void onPreInitialization(final PreInitializationEvent event) {
         // Map all modules, configurations, child plugins etc.
         // Initialize everything.
+        gameInstance = event.getGame();
     }
 
     public void onServerStarting(final ServerStartingEvent event) {
