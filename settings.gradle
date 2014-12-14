@@ -1,5 +1,3 @@
 rootProject.name = 'Foundation'
 include 'SpongeAPI'
 project(':SpongeAPI').projectDir = file('libs/SpongeAPI')
-
-include 'modules/EconomyAPI'
