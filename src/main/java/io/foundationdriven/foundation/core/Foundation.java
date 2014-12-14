@@ -50,7 +50,6 @@ public class Foundation {
 
     public Foundation() throws IllegalStateException {
         if (instance != null) throw new IllegalStateException("A Foundation instance is already initialized");
-        instance = this;
     }
 
     public static Foundation getInstance() {
@@ -69,6 +68,7 @@ public class Foundation {
     public void onPreInitialization(final PreInitializationEvent event) {
         // Map all modules, configurations, child plugins etc.
         // Initialize everything.
+        instance = this;
         gameInstance = event.getGame();
     }
 
