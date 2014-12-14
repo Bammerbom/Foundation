@@ -20,7 +20,7 @@ Foundation is an Essentials-replacement for Sponge. Rather than providing all fu
 ##### Clone the repository
 Setup git, and run the following command in the Git Bash:
 
-    $ git clone https://github.com/FoundationDevTeam/Foundation.git
+    $ git clone https://github.com/FoundationDriven/Foundation.git
     $ cd Foundation
 
 ##### Compile using Gradle
