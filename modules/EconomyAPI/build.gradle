@@ -2,8 +2,8 @@ plugins {
     id "java"
     id "idea"
     id "eclipse"
-    id "com.github.hierynomus.license" version "0.11.0"
 }
+apply plugin: "com.github.hierynomus.license"
 
 defaultTasks 'clean', 'licenseFormat', 'build'
 
@@ -13,6 +13,14 @@ version = '0.0.1-DEV'
 sourceCompatibility = 7
 targetCompatibility = 7
 
+sourceSets {
+    test
+}
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+    testRuntime 'org.ow2.asm:asm-all:4.0'
+}
 repositories {
     mavenCentral()
     maven {
@@ -26,7 +34,7 @@ dependencies {
 }
 
 license {
-    header file('LICENSE')
+    header file('../../LICENSE')
     ignoreFailures false
     strictCheck true
     mapping {
