@@ -44,9 +44,23 @@ If you are fixing an issue, you can just create a pull request.
 
 --------------------
 
+#### JavaDocs
+If you would like to see our JavaDocs (helpful for API development), please go to our website at http://foundationdriven.github.io/docs/
+If you notice that our JDs are outdated, please:
+1. Note that JavaDocs are (generally) updated every Saturday. It would be very impractical to update them every day as this must be done manually.
+2. If the JDs are over 2 weeks out of date, please create an issue or pull request at the [website repo]. We'll get to them ASAP.
+
+--------------------
+
 #### I found an issue!
 No software is absolutely perfect. If you found a bug or something else, please let us know by creating an issue. You can create an issue report here on GitHub. Please be as descriptive as possible, so a developer can fix the issue and create a pull request.
 
+--------------------
+
+####Common Sense
+Remember, our developers have school or work during the week and we have lives too! Be sure to be patient, be respectful, and use common sense.
+We hope you can enjoy Foundation as much as we love developing it. From your dev team, based around the world, have fun.
+~ The FoundationDriven Team (@sam4215, @exstar, and @OscarOrSomething)
 [Forum thread]: http://forums.spongepowered.org/t/1525/
 [Wiki]: https://github.com/FoundationDevTeam/Foundation/wiki
 [Issues]: https://github.com/FoundationDevTeam/Foundation/issues
@@ -55,3 +69,5 @@ No software is absolutely perfect. If you found a bug or something else, please 
 
 [Java SDK 6]: http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html
 [Git]: http://git-scm.com/
+
+[website repo]: https://github.com/FoundationDriven/FoundationDriven.github.io
