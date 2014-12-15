@@ -1,6 +1,8 @@
 package io.foundationdriven.foundation.api.teleportation.managers;
 
+import io.foundationdriven.foundation.api.teleportation.errors.UnsafeTeleport;
 import io.foundationdriven.foundation.api.teleportation.objects.Waypoint;
+import org.spongepowered.api.block.BlockTypes;
 import org.spongepowered.api.world.Location;
 
 import java.util.ArrayList;
@@ -67,6 +69,8 @@ public class WaypointManager {
      */
     public static Waypoint createWaypoint(String name, Location loc) {
         Waypoint newWaypoint = new Waypoint(name, loc);
+        if (loc.getBlock().getType() != BlockTypes.AIR || loc.add(0, 1, 0).getBlock().getType() != BlockTypes.AIR)
+            throw new UnsafeTeleport(newWaypoint);
         waypoints.add(newWaypoint);
         return newWaypoint;
     }

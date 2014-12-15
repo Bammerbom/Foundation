@@ -43,6 +43,7 @@ public class Waypoint {
     public Waypoint(String name, Location loc) {
         this.name = name;
         this.loc = loc;
+        this.uuid = UUID.randomUUID();
     }
 
     /**
