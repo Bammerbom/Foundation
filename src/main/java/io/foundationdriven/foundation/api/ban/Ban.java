@@ -39,7 +39,7 @@ public interface Ban {
      */
     public void setBanned(@Nullable Player player, @Nullable String ipv4);
     /**
-     * Sets a player or IPv4 address to be banned.
+     * Sets a player or IPv4 address to be unbanned.
      *
      * @param player or IP to be unbanned.
      */
