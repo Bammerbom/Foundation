@@ -10,11 +10,24 @@ You will need the following tools to develop for Foundation:-
   * Eclipse, IntelliJ IDEA or any othe IDE that suits you.
   * (optionally) Gradle
 
-## Guidelines
-Before you send a PR, make sure your code does follow these guidelines:
+## Pre-Pull request
 
-  * Be descriptive and explain why you made the changes/additions.
-  * Keep your pull requests to 1 commit. ( Use 'git rebase -i' )
+You MUST
+
+  * Include the license header at the top of all files (  See LICENSE )
+  * Add/Update javadocs
+  * Use spaces for indentation
+  * Use proper indentation
+  * Name appropriately
+  * Check your syntax and semantics
+  * Write / Run Unit tests ( If applicable )
+
+The gradle task preMerge will add the license to, compile and test your code
+
+## Guidelines
+Before you send a PR, make sure your code/repo does follow these guidelines:
+
+  * Try and minimise your commits ( Use 'git rebase -i' )
   * Always comment on your code and add/change JavaDocs to classes if needed.
 	
 ## Submitting a pull request
