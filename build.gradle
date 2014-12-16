@@ -1,9 +1,28 @@
+// Plugins
 plugins {
     id "java"
     id "idea"
     id "eclipse"
     id "com.github.hierynomus.license" version "0.11.0"
 }
+// Repositories
+repositories {
+    mavenCentral()
+    maven {
+        name 'Sponge maven repo'
+        url 'http://repo.spongepowered.org/Sponge/maven'
+    }
+}
+// Dependencies
+dependencies {
+    compile "org.spongepowered:spongeapi:1.0"
+}
+dependencies {
+    testCompile 'junit:junit:4.11'
+    testRuntime 'org.ow2.asm:asm-all:4.0'
+}
+
+// Settings
 
 defaultTasks 'clean', 'licenseFormat', 'build'
 
@@ -13,24 +32,9 @@ version = '0.0.1-DEV'
 sourceCompatibility = 7
 targetCompatibility = 7
 
-repositories {
-    mavenCentral()
-    maven {
-        name 'Sponge maven repo'
-        url 'http://repo.spongepowered.org/Sponge/maven'
-    }
-}
 
-dependencies {
-    compile "org.spongepowered:spongeapi:1.0"
-}
 sourceSets {
     test
-}
-
-dependencies {
-    testCompile 'junit:junit:4.11'
-    testRuntime 'org.ow2.asm:asm-all:4.0'
 }
 
 license {
@@ -43,3 +47,7 @@ license {
     ext.year = Calendar.getInstance().get(Calendar.YEAR)
     ext.name = 'FoundationDriven'
 }
+
+// Pre-Merge task
+
+task preMerge(dependsOn: ['license', 'check']) << {}
