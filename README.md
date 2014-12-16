@@ -23,6 +23,10 @@ Setup git, and run the following command in the Git Bash:
     $ git clone https://github.com/FoundationDriven/Foundation.git
     $ cd Foundation
 
+Install the pre-commit hook script:
+
+    $ cp script/pre-commit.sh .git/hooks
+
 ##### Compile using Gradle
 On Windows:
 
